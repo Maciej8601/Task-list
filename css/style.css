@@ -7,10 +7,14 @@ html {
 }
 
 .body {
+    max-width: 700px;
+    font-stretch: normal;
     background-color: floralwhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 15px;
     margin: auto;
+    font-family: 'Signika', sans-serif;
+}
+
+.listItem {
+    text-decoration: line-through;
 }
