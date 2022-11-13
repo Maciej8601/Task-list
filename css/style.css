@@ -13,8 +13,10 @@ html {
     padding: 15px;
     margin: auto;
     font-family: 'Signika', sans-serif;
-}
-
-.listItem {
-    text-decoration: line-through;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
 }

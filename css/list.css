@@ -1,0 +1,14 @@
+.list__Item {
+    text-decoration: line-through;
+    color: darkslategray;
+    list-style-type: none;
+}
+
+;
+
+.list .list {
+    list-style-type: none;
+    margin: 20px;
+}
+
+;
