@@ -10,18 +10,9 @@
         },
     ];
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-             <li ${task.done ? "class= \"listItem\"" : ""}>
-            ${task.content}
-             </li >
-        `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
     };
 
     const addNewTask = (newTaskContent) => {
@@ -30,7 +21,32 @@
         });
 
         render();
-    }
+    };
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+           <li ${task.done ? "class= \"listItem\"" : ""}> 
+           <button class="js-remove">
+           Usuń
+           </button> 
+            ${task.content}
+             </li >
+        `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
