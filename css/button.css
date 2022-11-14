@@ -1,0 +1,36 @@
+.button {
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    color: aliceblue;
+    background-color: teal;
+}
+
+.button:hover {
+    background-color: hsl(180, 100%, 35%);
+}
+
+.button__done {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    border: none;
+    background-color: green;
+}
+
+.button__done:hover {
+    background-color: #00b300;
+}
+
+.button__remove {
+    cursor: pointer;
+    display: grid;
+    justify-content: flex-end;
+    border: none;
+    background-color: red;
+}
+
+.button__remove:hover {
+    background-color: #ff3333;
+}

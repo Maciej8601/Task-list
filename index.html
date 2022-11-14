@@ -10,10 +10,11 @@
     <meta property="og:image" content="images/share.png?2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap" rel="stylesheet">
@@ -24,13 +25,15 @@
     <h1>Lista zadań</h1>
     </p>
     <p>
+    <header class="form form__header">Dodaj nowe zadanie</header>
     <form class="form js-form">
-        <input class="js-newTask">
-        <button>Dodaj do listy</button>
+        <input class="form__input js-newTask" autofocus>
+        <button class="button">Dodaj do listy</button>
     </form>
     </p>
     <p>
-    <ul class="list js-tasks">
+    <header class="list__header">Lista zadań</header>
+    <ul class="js-tasks">
     </ul>
     </p>
 </body>
