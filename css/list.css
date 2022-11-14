@@ -9,15 +9,17 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 500px;
+    width: 700px;
     margin: 5px;
 }
 
 .list__header {
     display: flex;
     justify-content: flex-start;
+    align-self: center;
     background-color: whitesmoke;
     font-size: x-large;
+    width: 100%;
 }
 
 .list__item {
@@ -32,5 +34,5 @@
     text-decoration: line-through;
     color: darkslategray;
     list-style-type: none;
-    width: 500px;
+    width: 700px;
 }

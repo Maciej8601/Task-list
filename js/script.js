@@ -16,6 +16,13 @@
         render();
     };
 
+    const focusOnSubmit = () => {
+        const newTask = document.querySelector(".js-newTask");
+        newTask.value = "";
+        newTask.focus();
+        render();
+    };
+
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
@@ -42,12 +49,14 @@
     const render = () => {
         let htmlString = "";
 
+        const inputElement = document.querySelector("input");
+
         for (const task of tasks) {
             htmlString += `
            <li ${task.done ? "class= \"list__item\"" : "class=\"lista\""}> 
-           <button class="button__done js-done">Done</button> 
+           <button class="button__done js-done">${task.done ? "✅" : "🟩"}</button> 
             ${task.content}
-            <button class="button__remove js-remove">Usuń</button> 
+            <button class="button__remove js-remove">🗑️</button> 
              </li>
         `
         };
@@ -55,6 +64,7 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         bindEvents();
+        inputElement.setAttribute("autofocus", "");
     };
 
     const onFormSubmit = (event) => {
@@ -65,7 +75,13 @@
             return;
         };
 
+        if (newTaskContent === "") {
+            focusOnSubmit();
+            return;
+        }
+
         addNewTask(newTaskContent);
+        focusOnSubmit();
     };
 
     const init = () => {

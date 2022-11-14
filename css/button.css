@@ -1,7 +1,7 @@
 .button {
     border: none;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     color: aliceblue;
     background-color: teal;
 }
@@ -11,22 +11,21 @@
 }
 
 .button__done {
+    display: flex;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
     align-self: center;
+    flex-wrap: wrap;
     border: none;
-    background-color: green;
-}
-
-.button__done:hover {
-    background-color: #00b300;
 }
 
 .button__remove {
+    display: flex;
     cursor: pointer;
     display: grid;
     justify-content: flex-end;
+    flex-wrap: wrap;
     border: none;
     background-color: red;
 }
