@@ -6,26 +6,26 @@
     background-color: teal;
 }
 
+@media(max-width:767px) {
+    .button {
+        display: flex;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+}
+
 .button:hover {
     background-color: hsl(180, 100%, 35%);
 }
 
 .button__done {
-    display: flex;
     cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    align-self: center;
-    flex-wrap: wrap;
+    text-decoration: none;
     border: none;
 }
 
 .button__remove {
-    display: flex;
     cursor: pointer;
-    display: grid;
-    justify-content: flex-end;
-    flex-wrap: wrap;
     border: none;
     background-color: red;
 }
