@@ -1,6 +1,5 @@
-.lista {
+.list {
     background-color: whitesmoke;
-    list-style-type: none;
     border-bottom: 2px solid #e9e9e9;
     display: flex;
     justify-content: space-between;
@@ -9,10 +8,8 @@
 }
 
 .list__header {
-    justify-content: space-between;
     background-color: whitesmoke;
     font-size: x-large;
-    flex-basis: 100%;
     padding: 10px;
 }
 
@@ -23,7 +20,4 @@
     background-color: whitesmoke;
     border-bottom: 2px solid #e9e9e9;
     text-decoration: line-through;
-    color: darkslategray;
-    list-style-type: none;
-    flex-basis: 100%;
 }

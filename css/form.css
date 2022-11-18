@@ -13,7 +13,8 @@
 
 @media(max-width:767px) {
     .form__header {
-        justify-content: center;
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
@@ -26,7 +27,6 @@
 
 @media(max-width:767px) {
     .form__input {
-        flex-grow: 1;
         flex-basis: 100%;
     }
 }

@@ -20,7 +20,6 @@
         const newTask = document.querySelector(".js-newTask");
         newTask.value = "";
         newTask.focus();
-        render();
     };
 
     const toggleTaskDone = (taskIndex) => {
@@ -53,11 +52,14 @@
 
         for (const task of tasks) {
             htmlString += `
-           <li ${task.done ? "class= \"list__item\"" : "class=\"lista\""}> 
-           <button class="button__done js-done">${task.done ? "✅" : "🟩"}</button> 
-            ${task.content}
-            <button class="button__remove js-remove">🗑️</button> 
-             </li>
+            <li class = "js-tasks list"}> 
+              <button class="button__done js-done">
+                    ${task.done ? "✅" : "🟩"}
+               </button> 
+               <span class="list${task.done ? " list__item" : ""}">
+                   ${task.content}</span>
+               <button class="button__remove js-remove">🗑️</button> 
+            </li>
         `
         };
 
