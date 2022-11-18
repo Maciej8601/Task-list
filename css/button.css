@@ -1,7 +1,6 @@
 .button {
     border: none;
     cursor: pointer;
-    margin: 10px;
     color: aliceblue;
     background-color: teal;
 }
@@ -10,7 +9,6 @@
     .button {
         display: flex;
         flex-basis: 100%;
-        flex-grow: 1;
     }
 }
 

@@ -7,15 +7,15 @@
     overflow-x: auto;
 }
 
-.form__header {
-    font-size: x-large;
+@media(max-width:767px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media(max-width:767px) {
-    .form__header {
-        display: flex;
-        justify-content: flex-start;
-    }
+.form__header {
+    font-size: x-large;
 }
 
 .form__input {
@@ -23,10 +23,5 @@
     align-content: center;
     flex-basis: 70%;
     border: 2px solid #e9e9e9;
-}
-
-@media(max-width:767px) {
-    .form__input {
-        flex-basis: 100%;
-    }
+    margin-bottom: 10px;
 }
