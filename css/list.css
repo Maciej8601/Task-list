@@ -10,7 +10,6 @@
 .list__header {
     background-color: whitesmoke;
     font-size: x-large;
-    padding: 10px;
 }
 
 .list__item {
@@ -20,4 +19,20 @@
     background-color: whitesmoke;
     border-bottom: 2px solid #e9e9e9;
     text-decoration: line-through;
+}
+
+.list__button--done {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+.list__button--remove {
+    cursor: pointer;
+    border: none;
+    background-color: red;
+}
+
+.list__button--remove:hover {
+    background-color: #ff3333;
 }

@@ -25,3 +25,21 @@
     border: 2px solid #e9e9e9;
     margin-bottom: 10px;
 }
+
+.form__button {
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    background-color: teal;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 35%);
+}
+
+@media(max-width:767px) {
+    .form__button {
+        display: flex;
+        flex-basis: 100%;
+    }
+}
