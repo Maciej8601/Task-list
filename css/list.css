@@ -26,6 +26,20 @@
     cursor: pointer;
 }
 
+.list__button {
+    justify-content: space-around;
+    border: none;
+    cursor: pointer;
+}
+
+.list__button:hover {
+    color: red;
+}
+
+.list__button:active {
+    color: white
+}
+
 .list__button--disabled {
     justify-content: space-around;
     border: none;
