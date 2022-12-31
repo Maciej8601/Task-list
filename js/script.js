@@ -1,7 +1,8 @@
 {
-    const tasks = [
-
+    let tasks = [
     ];
+
+    let hideDoneTasks = false;
 
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
@@ -9,9 +10,10 @@
     };
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
 
         render();
     };
@@ -45,7 +47,7 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         const inputElement = document.querySelector("input");
@@ -64,9 +66,39 @@
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+        inputElement.setAttribute("autofocus", "");
+    };
+
+    const renderButtons = () => {
+        const showButtons = () => {
+            if (tasks.length) {
+                let htmlString = "";
+
+                const listButtonsElement = document.querySelector(".js-buttons").innerHTML = htmlString;
+
+                for (const task of tasks) {
+                    listButtonsElement.innerHTML +=
+                        `<button class= "list__button js-hideDone">
+                         Ukryj zrobione
+                     </button >
+                     <button class="list__buton js-setAllDone"> 
+                         Zaznacz wszystkie
+                     </button>
+                     `}
+                return;
+            };
+        };
+
+    };
+
+    const bindButtonsEvents = () => { };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindEvents();
-        inputElement.setAttribute("autofocus", "");
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
