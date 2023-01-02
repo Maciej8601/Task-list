@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 100%;
 }
 
 .list__header {
@@ -27,17 +26,14 @@
 }
 
 .list__button {
-    justify-content: space-around;
+    color: hsl(180, 100%, 25%);
     border: none;
     cursor: pointer;
+    transition: 1s;
 }
 
 .list__button:hover {
-    color: red;
-}
-
-.list__button:active {
-    color: white
+    color: hsl(180, 100%, 35%);
 }
 
 .list__button--disabled {
@@ -55,6 +51,7 @@
     cursor: pointer;
     text-decoration: none;
     border: none;
+    transition: 1s;
 }
 
 .list__button--done:hover {
@@ -65,6 +62,7 @@
     cursor: pointer;
     border: none;
     background-color: red;
+    transition: 1s;
 }
 
 .list__button--remove:hover {
