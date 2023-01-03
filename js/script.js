@@ -70,6 +70,20 @@
         });
     };
 
+    const bindButtonsEvents = () => {
+        const toggleHideDoneTasksButton = document.querySelector(".js-hideDone");
+
+        if (toggleHideDoneTasksButton) {
+            toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+        };
+
+        const markAllTasksDoneButton = document.querySelector(".js-setAllDone");
+
+        if (markAllTasksDoneButton) {
+            markAllTasksDoneButton.addEventListener("click", setAllTasksDone);
+        }
+    };
+
     const renderTasks = () => {
         let htmlString = "";
 
@@ -101,38 +115,14 @@
         };
 
         listButtonsElement.innerHTML = `
-            <button class="list__button js-hideDone">
+            <button class="list__button" js-hideDone">
             ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
-            <button class="list__button js-setAllDone" 
+            <button class="${!tasks.every(({ done }) => done) ? "list__button" : "list__button--disabled"} js-setAllDone" 
             ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
             </button>
             `;
-    };
-
-    const bindButtonsEvents = () => {
-        const toggleHideDoneTasksButton = document.querySelector(".js-hideDone");
-
-        if (toggleHideDoneTasksButton) {
-            toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
-        };
-
-        const hideDoneTasksButton = document.querySelectorAll(".js-hideDone");
-
-        hideDoneTasksButton.forEach((hideDoneTasksButton, index) => {
-            hideDoneTasksButton.addEventListener("click", () => {
-                hideDoneTasks(index);
-            });
-        });
-
-        const setAllDone = document.querySelectorAll(".js-setAllDone");
-
-        setAllDone.forEach((setAllDone, index) => {
-            setAllDone.addEventListener("click", () => {
-                setAllTasksDone(index);
-            });
-        });
     };
 
     const render = () => {
