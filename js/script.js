@@ -21,11 +21,6 @@
         render();
     };
 
-    const toggleHideDoneTasks = () => {
-        hideDoneTasks = !hideDoneTasks;
-        render();
-    };
-
     const setAllTasksDone = () => {
         tasks = tasks.map((task) => ({
             ...task,
@@ -49,6 +44,11 @@
             },
             ...tasks.slice(taskIndex + 1),
         ];
+        render();
+    };
+
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
         render();
     };
 
@@ -81,7 +81,7 @@
 
         if (markAllTasksDoneButton) {
             markAllTasksDoneButton.addEventListener("click", setAllTasksDone);
-        }
+        };
     };
 
     const renderTasks = () => {
@@ -115,7 +115,7 @@
         };
 
         listButtonsElement.innerHTML = `
-            <button class="list__button" js-hideDone">
+            <button class="list__button js-hideDone">
             ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button class="${!tasks.every(({ done }) => done) ? "list__button" : "list__button--disabled"} js-setAllDone" 
