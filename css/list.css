@@ -22,6 +22,10 @@
     text-decoration: line-through;
 }
 
+.list__item--hidden {
+    display: none;
+}
+
 .form__button {
     border: none;
     cursor: pointer;
