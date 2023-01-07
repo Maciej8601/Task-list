@@ -23,6 +23,13 @@
     transition: 1s;
 }
 
+@media(max-width:767px) {
+    .section__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
 .section__buttons:hover {
     color: hsl(180, 100%, 35%);
 }
