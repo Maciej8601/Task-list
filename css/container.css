@@ -1,0 +1,7 @@
+.container {
+    word-break: break-word;
+    font-stretch: normal;
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+}
