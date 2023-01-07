@@ -17,6 +17,7 @@
 }
 
 .section__buttons {
+    background: white;
     color: hsl(180, 100%, 25%);
     border: none;
     cursor: pointer;
