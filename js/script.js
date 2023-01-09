@@ -115,12 +115,13 @@
         };
 
         listButtonsElement.innerHTML = `
-            <button class="section__buttons js-hideDone">
-            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+            <button class="buttons__button js-hideDone">
+                ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
-            <button class="${!tasks.every(({ done }) => done) ? " section__buttons" : "section__buttons--disabled"} js-setAllDone" 
-            ${tasks.every(({ done }) => done) ? "disabled" : ""}>
-            Ukończ wszystkie
+            <button class="${!tasks.every(({ done }) => done) ? "buttons__button" : "buttons__button--disabled"} 
+                     js-setAllDone" 
+                ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+                Ukończ wszystkie
             </button>
             `;
     };
