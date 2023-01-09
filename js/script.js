@@ -8,8 +8,8 @@
         tasks = [
             ...tasks.slice(0, taskIndex),
             ...tasks.slice(taskIndex + 1),
-        ],
-            render();
+        ];
+        render();
     };
 
     const addNewTask = (newTaskContent) => {
@@ -118,8 +118,8 @@
             <button class="buttons__button js-hideDone">
                 ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
-            <button class="${!tasks.every(({ done }) => done) ? "buttons__button" : "buttons__button--disabled"} 
-                     js-setAllDone" 
+            <button class="${!tasks.every(({ done }) => done) ?
+                "buttons__button" : "buttons__button--disabled"} js-setAllDone" 
                 ${tasks.every(({ done }) => done) ? "disabled" : ""}>
                 Ukończ wszystkie
             </button>
